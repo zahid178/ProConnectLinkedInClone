@@ -1,0 +1,101 @@
+POST http://localhost:9080/register HTTP/1.1
+content-Type: application/json
+
+# {
+#   "username": "jane_smith",
+#   "password": "supersecret",
+#   "email": "jane_smith@example.com",
+#   "name": "Jane Smith",
+#   "active": true
+# }
+
+# {
+#   "username": "alex_rivera",
+#   "password": "r@ndomP@ss123",
+#   "email": "alex_rivera@example.com",
+#   "name": "Alex Rivera",
+#   "active": true
+# }
+
+{
+  "username": "zahid",
+  "password": "zahid",
+  "email": "zahida@gmail.com",
+  "name": "zahid",
+  "active": true
+}
+
+
+###
+POST http://localhost:9080/login HTTP/1.1
+content-Type: application/json
+
+# {
+#   "email": "jane_smith@example.com",
+#   "password": "supersecret"
+# }
+
+
+# {
+#   "email": "alex_rivera@example.com",
+#   "password": "r@ndomP@ss123"
+# }
+
+{
+  "email": "zahida@gmail.com",
+  "password": "zahid"
+}
+
+
+###
+GET http://localhost:9080/get_user_and_profile 
+content-Type: application/json
+
+# {
+#   "token": "f7f8030d679c3439e36a19253e136a7a01473b535c7a45ccf88003f484ca8ad3"
+# }
+
+
+# {
+#   "token": "cd1887723c250dcc1ae08418822b39607deaf57895294773ebacb992ffd7f492"
+# }
+
+
+{
+  "token": "3166a6bfbbbda8b4427ddb4cd28bf359f7a87fbf7e023707560b466e2bfe6473"
+}
+
+
+###
+POST http://localhost:9080/update_profile_data
+content-Type: application/json
+
+
+  {
+  "token": "57b5e38ee6324d3bcc3ed76d5b5f99f46a0bbbb9eb996004d1c9e18dceca53ec",
+  "bio" : "Hi, I am Zahid",
+  "currentPost": "CTO",
+  "pastWork" : [
+    {
+      "company": "Microsoft",
+      "position": "CTO",
+      "years": "2+"
+    }
+  ],
+  "education" : [
+    {
+      "school" : "IIT",
+      "degree" : "B.Tech",
+      "fieldOfStudy" : "2015-2019"
+    }
+  ]
+}
+
+# {
+#   "token" : "3166a6bfbbbda8b4427ddb4cd28bf359f7a87fbf7e023707560b466e2bfe6473",
+#   "bio": "Hi, I am Zahid"
+# }
+
+
+###
+GET http://localhost:9080/user/get_all_users
